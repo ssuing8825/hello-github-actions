@@ -10,11 +10,18 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Send email
-      uses: sendgrid/email-action@v1
+    
+    - name: SendGrid Action
+      uses: mmichailidis/sendgrid-mail-action@v1.0
       with:
-        api-key: ${{ secrets.SENDGRID_API_KEY }}
-        to: steven.suing@gmail.com
-        from: steven.suing@gmail.com
-        subject: "Take a break and stretch!"
+        sendgrid-token: ${{ secrets.SENDGRID_API_KEY }}
+        mail: 'steven.suing@gmail.com'
+        subject: 'Take a break and stretch!'
+
+    # - name: Send email
+    #   uses: sendgrid/email-action@v1
+    #   with:
+    #     api-key: ${{ secrets.SENDGRID_API_KEY }}
+    #     to: steven.suing@gmail.com
+    #     from: steven.suing@gmail.com
+    #     subject: "Take a break and stretch!"
