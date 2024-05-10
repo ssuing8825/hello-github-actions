@@ -1,8 +1,9 @@
 name: Send email every 2 minutes
 
 on:
-  schedule:
-    - cron: '*/2 * * * *'
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '*/2 * * * *'
 
 jobs:
   send_email:
