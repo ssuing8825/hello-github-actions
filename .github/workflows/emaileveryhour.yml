@@ -16,6 +16,7 @@ jobs:
       with:
         sendgrid-token: ${{ secrets.SENDGRID_API_KEY }}
         mail: 'steven.suing@gmail.com'
+        from: 'steven.suing@ais.com'
         subject: 'Take a break and stretch!'
 
     # - name: Send email
