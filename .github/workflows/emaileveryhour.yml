@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: SendGrid Action
-      uses: mmichailidis/sendgrid-mail-action@v1.0
+      uses: mmichailidis/sendgrid-mail-action@v1.2
       with:
         sendgrid-token: ${{ secrets.SENDGRID_API_KEY }}
         mail: 'steven.suing@gmail.com'
